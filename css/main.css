@@ -1,0 +1,131 @@
+:root {
+    --main_background: #134057;
+    --side_background: #1D3947;
+    --header_back: #134057;
+    --header_text: #1D93CF;
+    --text: #8DD7FC;
+    --title: #097CB5;
+    --nav_hover: #2EB1F2;
+  }
+  
+  html, body {
+      background-color: var(--side_background);
+      height: 100%;
+  }
+  
+  pre {
+      color: var(--header_text);
+        background-color: var(--header_back);
+        text-align: center;
+  }
+  
+  a {
+      color: #1D93CF;
+  }
+  
+  h1 {
+      color: var(--title);
+      padding: 5px;
+  }
+  
+  p {
+      color: var(--text);
+      padding: 5px;
+      text-align: justify;
+  }
+
+  img {
+    /* padding: 10px; */
+    padding-left: 15px;
+    padding-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    /*text-align: center;*/
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--nav_hover);
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  .left {
+    /* background-color: #2196F3; */
+    padding: 1px;
+    float: left;
+    width: 20%; /* The width is 20%, by default */
+  }
+  
+  .main {
+    background-color: var(--main_background);
+    padding: 1px;
+    float: left;
+    width: 60%; /* The width is 60%, by default */
+    height: 100%;
+  }
+  
+  .right {
+    /* background-color: #4CAF50; */
+    padding: 1px;
+    float: left;
+    width: 20%; /* The width is 20%, by default */
+  }
+  
+  /* Use a media query to add a break point at 800px: */
+  @media screen and (max-width: 800px) {
+    .main {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .left, .right {
+      width: 0%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
