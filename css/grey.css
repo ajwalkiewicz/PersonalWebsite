@@ -1,0 +1,215 @@
+:root {
+  --main-background: #242424;
+  --side-background: #141414;
+  --header-background: #3a3a3a;
+  --header-text: #a4a4a4;
+  --navbar-background: #333;
+  --navbar-hover: #111;
+  --navbar-dropdown: #f9f9f9;
+  --navbar-dropdown-shadow: rgba(0,0,0,0.2);
+  --navbar-dropdown-links: black;
+  --navbar-dropdown-links-hover: #bdbdbd;
+  --aside-background:  #2b2b2b;
+  --text: #a4a4a4;
+  --h-title: #696969;
+  --links: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.left {
+  /* background-color: var(--side-background); */
+  padding: 1px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+
+}
+
+.main {
+  background: var(--main-background);
+  /* background: scroll; */
+  padding: 1px;
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+  /* height: 100%; */
+  /* overflow-x: hidden;
+  overflow-y: auto; */
+}
+
+.right {
+  /* background-color: var(--side-background); */
+  padding: 1px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+  .main {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+@media screen and (max-width: 800px) {
+  .left, .right {
+    width: 0%; /* The width is 0%, when the viewport is 800px or smaller */
+  }
+}
+
+html, body {
+    background-color: var(--side-background);
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+  color: var(--text);
+  font-family: Courier;
+}
+
+pre {
+    color: var(--header-text);
+    background-color: var(--header-background);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 1000;
+    font-size:1.5vw
+  }
+
+p {
+    color: var(--text);
+    padding: 5px;
+    text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  color: var(--links);
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  text-decoration: none;
+}
+
+nav {
+  /* stick navbar-background to the top when scrolling */
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--navbar-background);
+}
+
+li.navbar {
+  float: left;
+}
+
+li.navbar a, .dropbtn{
+  display: inline-block;
+  color: var(--links);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li.navbar a:hover:not(.active), .dropdown:hover .dropbtn {
+  background-color: var(--navbar-hover);
+}
+
+li.dropdown {
+  /* display: inline-block;  */
+  float: left
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--navbar-dropdown);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px var(--navbar-dropdown-shadow);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--navbar-dropdown-links);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--navbar-dropdown-links-hover);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+/* Set contact button on nav bar to be on the right */
+/* #contact {
+  float: right;
+} */
+
+h1 {
+    color: var(--h-title);
+    padding: 5px;
+}
+
+img {
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+aside {
+  float: left;
+  padding: 10px;
+  width: 30%;
+  /* border: 2px solid cornsilk; */
+  background: var(--aside-background);
+}
+
+article {
+  float: left;
+  padding: 10px;
+  width: 70%;
+}
+
+section.contact article {
+  float: left;
+  padding: 10px;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 900px) {
+  aside, article, section.contact article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+

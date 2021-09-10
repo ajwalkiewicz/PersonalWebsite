@@ -10,13 +10,23 @@
   
   html, body {
       background-color: var(--side_background);
+      /* background: scroll; */
       height: 100%;
+      margin: 0px;
   }
   
   pre {
       color: var(--header_text);
-        background-color: var(--header_back);
-        text-align: center;
+      background-color: var(--header_back);
+      text-align: center;
+      margin: 0px;
+      padding: 0px;
+      font-weight: 1000;
+      font-size:1.5vw
+    }
+
+  h1, h2, h3, p, a, li, pre {
+    font-family: Courier;
   }
   
   a {
@@ -35,7 +45,6 @@
   }
 
   img {
-    /* padding: 10px; */
     padding-left: 15px;
     padding-bottom: 10px;
   }
@@ -46,10 +55,9 @@
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    /*text-align: center;*/
   }
   
-  li {
+  li.navigation-bar {
     float: left;
   }
   
@@ -97,22 +105,26 @@
   }
   
   .left {
-    /* background-color: #2196F3; */
+    /* background-color: var(--side_background); */
     padding: 1px;
     float: left;
     width: 20%; /* The width is 20%, by default */
+
   }
   
   .main {
-    background-color: var(--main_background);
+    background: var(--main_background);
+    /* background: scroll; */
     padding: 1px;
     float: left;
     width: 60%; /* The width is 60%, by default */
-    height: 100%;
+    /* height: 100%; */
+    /* overflow-x: hidden;
+    overflow-y: auto; */
   }
   
   .right {
-    /* background-color: #4CAF50; */
+    /* background-color: var(--side_background); */
     padding: 1px;
     float: left;
     width: 20%; /* The width is 20%, by default */
@@ -126,6 +138,6 @@
   }
   @media screen and (max-width: 800px) {
     .left, .right {
-      width: 0%; /* The width is 100%, when the viewport is 800px or smaller */
+      width: 0%; /* The width is 0%, when the viewport is 800px or smaller */
     }
   }
